@@ -17,7 +17,10 @@ let usuarios = [ {nombre:'Omar Salgado', email:'omarsalgado37@gmail.com',
                  puesto :'Desarrollador', fecha:'26/11/2020',
                 domicilio:'Venusatinao Carrana CDMX', habilidades:[ 'Cauteloso' ]}
               ]
-app.get('/telcel', function (req, res) {
+              app.get('/telcel', function (req, res) {
+                res.json(usuarios)
+              })
+app.get('/', function (req, res) {
   res.json(usuarios)
 })
 app.post('/telcel', function (req, res) {
